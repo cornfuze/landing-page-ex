@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'puerto-rico': {
+                            '50': '#f1fcf8',
+                            '100': '#d1f6ea',
+                            '200': '#a4ebd4',
+                            '300': '#6edabc',
+                            '400': '#4ac4a6',
+                            '500': '#27a588',
+                            '600': '#1d846f',
+                            '700': '#1b6a5b',
+                            '800': '#1a554a',
+                            '900': '#1a473f',
+                            '950': '#092a25',
+                        },
+                        'claret': {
+                            '50': '#fef2f2',
+                            '100': '#fde6e6',
+                            '200': '#fad1d2',
+                            '300': '#f6abac',
+                            '400': '#f07c80',
+                            '500': '#e64d57',
+                            '600': '#d22c3f',
+                            '700': '#b11f34',
+                            '800': '#941d32',
+                            '900': '#841d32',
+                            '950': '#470a15',
+                        },
+
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Promotion Component -->
+    <div id="promo" class="flex items-center justify-between gap-4 bg-puerto-rico-700 px-4 py-3 text-white">
+        <p class="text-sm font-medium">
+            PROMO UJIAN HINGGA 50%
+            <a href="#" class="inline-block underline">Berlaku untuk Minggu ini!</a>
+        </p>
+    
+        <button aria-label="Dismiss" class="shrink-0 rounded-lg bg-black/10 p-1 transition hover:bg-black/20" onclick="dismissPromo()">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                    clip-rule="evenodd" />
+            </svg>
+        </button>
+    </div>
+    
+    <script>
+        function dismissPromo() {
+            document.getElementById('promo').style.display = 'none';
+        }
+    </script>
+    <!-- End Promotion Component -->
+
+    <!-- Navigation Component -->
+    <header class="bg-white">
+        <div class="mx-auto max-w-screen-2xl px-4 py-8 sm:px-6 lg:px-8">
+            <div class="flex flex-col items-start gap-4 md:flex-row md:items-center md:justify-between">
+                <div>
+                    <h1 class="text-2xl font-bold text-gray-900 sm:text-3xl"><a href="index.html">Exa Test</a></h1>
+
+                    <p class="mt-1.5 text-sm text-gray-500">
+                        Platform Ujian Online Terbaik untuk Meningkatkan Prestasi Anda!
+                    </p>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <button
+                        class="inline-flex items-center justify-center gap-1.5 rounded border border-gray-200 bg-white px-5 py-3 text-gray-900 transition hover:text-gray-700 focus:outline-none focus:ring"
+                        type="button">
+                        <span class="text-sm font-medium"> Tata Cara Ujian </span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                    </button>
+
+                    <a
+                        class="inline-block rounded bg-puerto-rico-500 px-5 py-3 text-sm font-medium text-white transition hover:bg-puerto-rico-600 focus:outline-none focus:ring"
+                        type="button" href="404.html">
+                        Mulai Ujian
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Navigation Component -->
+
+    <!-- 404 -->
+    <div class="grid h-screen place-content-center bg-white px-4">
+    <div class="text-center">
+        <h1 class="text-9xl font-black text-gray-200">404</h1>
+
+        <p class="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Uh-oh!</p>
+
+        <p class="mt-4 text-gray-500">Halaman Tidak Tersedia.</p>
+
+        <a href="index.html"
+            class="mt-6 inline-block rounded bg-puerto-rico-500 px-5 py-3 text-sm font-medium text-white hover:bg-puerto-rico-600 focus:outline-none focus:ring">
+            Kembali Ke Beranda
+        </a>
+    </div>
+    </div>
+    <!-- End 404-->
+</body>
+</html>
